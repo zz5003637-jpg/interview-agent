@@ -82,10 +82,37 @@ npx vercel deploy --prod --yes
 
 ### 2. GitHub Pages（前端）
 
-1. 推送代码到 GitHub
-2. Settings → Pages → Source 选 **GitHub Actions**
-3. 更新 `public/llm-proxy.json` 中的 `proxyUrl`
-4. `push` 到 `main`/`master` 触发 `.github/workflows/deploy.yml`
+**本地已配置 `origin` → `https://github.com/zz5003637/interview-agent.git`，分支 `main`。**
+
+在本机执行（需能访问 github.com）：
+
+```powershell
+.\scripts\push-github.ps1
+```
+
+或手动：
+
+```powershell
+# 若仓库尚未创建：在 GitHub 新建空仓库 interview-agent（不要加 README）
+git push -u origin main
+```
+
+**启用 Pages：**
+
+1. 打开 `https://github.com/zz5003637/interview-agent/settings/pages`
+2. **Build and deployment → Source** 选 **GitHub Actions**
+3. 打开 **Actions**，等待 `Deploy to GitHub Pages` 工作流成功
+
+线上地址：`https://zz5003637.github.io/interview-agent/`
+
+**Vercel CORS（Pages 上线后）：**
+
+| 变量 | 值 |
+|------|-----|
+| `GITHUB_PAGES_ORIGIN` | `https://zz5003637.github.io` |
+| `ALLOWED_ORIGINS` | `http://localhost:5173,http://localhost:4173,https://zz5003637.github.io` |
+
+改完后在 Vercel **Redeploy**。
 
 ## 项目结构
 
