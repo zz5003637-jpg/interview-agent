@@ -82,7 +82,7 @@ npx vercel deploy --prod --yes
 
 ### 2. GitHub Pages（前端）
 
-**本地已配置 `origin` → `https://github.com/zz5003637/interview-agent.git`，分支 `main`。**
+**本地已配置 `origin` → `https://github.com/zz5003637-jpg/interview-agent.git`，分支 `main`。**
 
 在本机执行（需能访问 github.com）：
 
@@ -99,18 +99,18 @@ git push -u origin main
 
 **启用 Pages：**
 
-1. 打开 `https://github.com/zz5003637/interview-agent/settings/pages`
+1. 打开 `https://github.com/zz5003637-jpg/interview-agent/settings/pages`
 2. **Build and deployment → Source** 选 **GitHub Actions**
 3. 打开 **Actions**，等待 `Deploy to GitHub Pages` 工作流成功
 
-线上地址：`https://zz5003637.github.io/interview-agent/`
+线上地址：`https://zz5003637-jpg.github.io/interview-agent/`
 
 **Vercel CORS（Pages 上线后）：**
 
 | 变量 | 值 |
 |------|-----|
-| `GITHUB_PAGES_ORIGIN` | `https://zz5003637.github.io` |
-| `ALLOWED_ORIGINS` | `http://localhost:5173,http://localhost:4173,https://zz5003637.github.io` |
+| `GITHUB_PAGES_ORIGIN` | `https://zz5003637-jpg.github.io` |
+| `ALLOWED_ORIGINS` | `http://localhost:5173,http://localhost:4173,https://zz5003637-jpg.github.io` |
 
 改完后在 Vercel **Redeploy**。
 

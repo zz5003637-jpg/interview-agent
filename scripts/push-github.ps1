@@ -7,7 +7,7 @@ $Root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 Set-Location $Root
 
 $RepoName = "interview-agent"
-$DefaultOwner = "zz5003637"
+$DefaultOwner = "zz5003637-jpg"
 
 Write-Host "==> 项目目录: $Root"
 Write-Host "==> 目标仓库: $DefaultOwner/$RepoName"
